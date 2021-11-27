@@ -349,3 +349,4 @@ tool.AncestryChanged:Wait()
 LocalPlayer.Character:BreakJoints()
 end
 })
+print(':P')
