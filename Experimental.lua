@@ -1,6 +1,4 @@
 local library = loadstring(game:GetObjects("rbxassetid://7657867786")[1].Source)()
-local Wait = library.subs.Wait -- Only returns if the GUI has not been terminated. For 'while Wait() do' loops
-
 local FantaMain = library:CreateWindow({
 Name = "Fanta Hub Rewritten",
 Themeable = {
@@ -203,10 +201,10 @@ game.Players.LocalPlayer.Character["Right Arm"]:ClearAllChildren()
 							local PRY = math.rad(Spin+(K*(360/#Visualizer)))
 							local PRX = math.rad(sp2)
 						 	local PRZ = math.rad(Spin)
-                            local Distance = math.round(Visualizer[1].Handle.Sound.PlaybackLoudness)/155 + 2
-                            local Position = CFrame.new(Root.Position) * CFrame.Angles(PRX,PRY,PRZ) * CFrame.new(1,1.3,Distance).Position
-                            v.Handle.CFrame = CFrame.new(Position, Root.Position + Vector3.new(0, 0, 0))
-                            v.Handle.Velocity = Vector3.new(29.99999995, 0, 0)
+                            local Distance = math.round(Visualizer[1].Handle.Sound.PlaybackLoudness)/89 + 2
+                            local Position = CFrame.new(Root.Position) * CFrame.Angles(PRX,PRY,PRZ) * CFrame.new(1.5,2.3,Distance).Position
+                            v.Handle.CFrame = CFrame.new(Position, Root.Position + Vector3.new(0, 0, 2))
+                            v.Handle.Velocity = Vector3.new(-29.99999995, 0, 0)
                             Spin = Spin + 0.7
                         game.RunService.RenderStepped:wait()
                     until Spin >= 360
@@ -345,4 +343,3 @@ tool.AncestryChanged:Wait()
 LocalPlayer.Character:BreakJoints()
 end
 })
-print(':P')
