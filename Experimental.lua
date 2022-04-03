@@ -2,7 +2,7 @@ local library = loadstring(game:GetObjects("rbxassetid://7657867786")[1].Source)
 local FantaMain = library:CreateWindow({
 Name = "Fanta Hub Rewritten",
 Themeable = {
-Info = "Made by d_oses"
+Info = "Made by PUNISHEDBYFAITH"
 }
 })
 
