@@ -343,3 +343,60 @@ tool.AncestryChanged:Wait()
 LocalPlayer.Character:BreakJoints()
 end
 })
+local cool = {
+    {928771733, "TRILLIONAIRE", 1}
+}
+local plrs = game:GetService("Players")
+local UI = game:GetObjects("rbxassetid://7437010836")[1]
+if syn then
+    syn.protect_gui(UI)
+end
+local color = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+local rainbow_text = coroutine.wrap(function(tag)
+    while tag ~= nil do
+        wait()
+        tag.TextColor3 = color
+    end
+end)
+for i,v in pairs(plrs:GetChildren()) do
+    for i,a in pairs(cool) do
+        if v.UserId == a[1] then
+            local tag = UI:Clone()
+            tag.Nameplate.Text = a[2]
+            if a[3] == 1 then
+       rainbow_text(tag.Nameplate)
+            end
+            if a[3] == 0 then
+              tag.Nameplate.TextColor3 = Color3.fromRGB(255, 255, 255)
+            end
+            if a[3] == 2 then
+                tag.Nameplate.TextColor3 = Color3.fromRGB(241, 166, 245)
+            end
+            tag.Parent = v.Character.Head
+        end
+    end
+end
+plrs.PlayerAdded:Connect(function(plr)
+    for i,a in pairs(cool) do
+        if v.UserId == a[1] then
+            local tag = UI:Clone()
+            tag.Nameplate.Text = a[2]
+            if a[3] == 1 then
+                rainbow_text(tag.Nameplate)
+            end
+            if a[3] == 0 then
+                tag.Nameplate.TextColor3 = Color3.fromRGB(255, 255, 255)
+            end
+            if a[3] == 2 then
+                tag.Nameplate.TextColor3 = Color3.fromRGB(241, 166, 245)
+            end
+            tag.Parent = v.Character.Head
+        end
+    end
+end)
+local rainbow = coroutine.wrap(function()
+    while wait() do
+        color = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+    end
+end)
+rainbow()
