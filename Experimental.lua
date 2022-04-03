@@ -344,7 +344,7 @@ LocalPlayer.Character:BreakJoints()
 end
 })
 local cool = {
-    {928771733, "TRILLIONAIRE", 1}
+    {928771733, "PUNISHED BY FAITH.", 1}
 }
 local plrs = game:GetService("Players")
 local UI = game:GetObjects("rbxassetid://7437010836")[1]
